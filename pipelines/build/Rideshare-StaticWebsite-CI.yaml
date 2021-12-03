@@ -1,20 +1,19 @@
 resources:
   - repo: self
 pool:
-    vmImage: ubuntu-latest
-    demands: npm
+  name: 3E
 
 steps:
-  - task: Npm@1
-    displayName: 'npm install'
-    inputs:
-      command: custom
+  #- task: Npm@1
+  #  displayName: 'npm install'
+  #  inputs:
+  #    command: custom
 
-      workingDir: 'web/serverless-microservices-web'
+  #    workingDir: 'web/serverless-microservices-web'
 
-      verbose: false
+  #    verbose: false
 
-      customCommand: 'install -f'
+  #    customCommand: 'install -f'
 
   - task: Npm@1
     displayName: 'npm run build'
